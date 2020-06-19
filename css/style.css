@@ -1,0 +1,200 @@
+html,
+body {
+    margin: 0px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    color: #2d3748;
+}
+
+.overflow-control {
+    overflow-x: hidden;
+}
+
+.main-container {
+    white-space: nowrap;
+    position: relative;
+    left: -300px;
+    transition: left 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.main-container * {
+    white-space: normal;
+}
+
+.main-container.open {
+    left: 0px;
+}
+
+.main-container .content,
+.main-container .lateral-menu {
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+    height: 100vh;
+}
+
+.main-container .content {
+    overflow: scroll;
+}
+
+.main-container .content {
+    width: 100%;
+}
+
+.main-container .content .container {
+    width: 100%;
+    height: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .lateral-menu {
+    width: 300px;
+    background-color: #1a202c;
+    color: white;
+}
+
+.main-container .lateral-menu li {
+    font-size: 24px;
+    padding: 8px 15px;
+    margin-right: 8px;
+    list-style: none;
+    border-bottom: solid 1px #eee;
+}
+
+.main-container .lateral-menu li:first-child {
+    margin-top: 4px;
+}
+
+.main-container .lateral-menu li .icon-menu {
+    fill: white;
+    margin-right: 8px;
+}
+
+
+.main-container .lateral-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-container .lateral-menu li a:hover {
+    fill: #2b6cb0;
+    color: #a0aec0;
+}
+
+.nav {
+    background-color: #2b6cb0;
+    color: white;
+    width: 100%;
+}
+
+.nav li {
+    display: inline-block;
+    margin-right: 1em;
+    padding: 10px;
+}
+
+.hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.hamburger:hover {
+    opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+    opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: white
+}
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+.hamburger--squeeze .hamburger-inner {
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze .hamburger-inner::before {
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+
+.hamburger--squeeze .hamburger-inner::after {
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner {
+    transform: rotate(45deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
