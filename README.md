@@ -14,6 +14,7 @@
 - [What is this?](#what-is-this)
 - [Version History](#version-history)
 - [Preview](#preview)
+- [Try a demo](#try-a-demo)
 - [Have questions?](#have-questions)
 
 ## What is this?
@@ -33,6 +34,10 @@ Thanks for your visiting! 👍
 ![Hamburger](https://res.cloudinary.com/developerteam/image/upload/v1592598950/HamburgerLateralMnu/hamburger.png)
 ![Hamburger-Open](https://res.cloudinary.com/developerteam/image/upload/v1592598949/HamburgerLateralMnu/hamburger-open.png)
 ![Hamburger-Gif](https://res.cloudinary.com/developerteam/image/upload/v1592598950/HamburgerLateralMnu/hamburger-animate.gif)
+
+## Try a demo
+
+If you want to try a live and free demo of this Hamburger Lateral Menu, you can do it, just need to go to <a href="https://codepen.io/hgodinez/pen/OJMxPaK" target="_blank">Codepen.io</a>
 
 ## Have questions?
 
